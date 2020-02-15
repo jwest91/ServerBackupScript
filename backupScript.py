@@ -28,3 +28,4 @@ for individualFile in sourceFiles:
 
 #TO-DO:
 # First check the destination path - delete previous files / overwrite them
+# Add timing functionality to continuously backup the files in a certain time interval
