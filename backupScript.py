@@ -1,16 +1,24 @@
-import os
-import shutil
+import os, shutil
 
-#Where to get the fiels from to back up (sample path)
+#Where to get the fiels from to back up (test path on Mac - will change for server machine)
 sourcePath = "/users/justinwest/Desktop/Server/"
 
-#Where to copy the files to (sample path)
+#Where to copy the files to (test path on Mac - will change for server machine)
 destinationPath = "/Volumes/SERVERFILES/"
+
+#World folder path (test path on Mac)
+worldFolderPath = "/users/justinwest/Desktop/Server/world"
+
+#World folder destination (test path on Mac)
+worldFolderDest = "/Volumes/SERVERFILES/world"
+
+#Copy the world folder to destination
+shutil.copytree(worldFolderPath, worldFolderDest)
 
 #Get the files in the source directory 
 sourceFiles = os.listdir(sourcePath)
 
-#Loop through the files
+#Loop through the files (might not be needed - investigate later)
 for individualFile in sourceFiles:
 	fullFileName = os.path.join(sourcePath, individualFile)
 
@@ -18,8 +26,5 @@ for individualFile in sourceFiles:
 	if os.path.isfile(fullFileName):
 		shutil.copy(fullFileName, destinationPath)
 
-
-
 #TO-DO:
-# Copy world directory from within the server directory
 # First check the destination path - delete previous files / overwrite them
