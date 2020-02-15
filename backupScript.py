@@ -18,3 +18,8 @@ for individualFile in sourceFiles:
 	if os.path.isfile(fullFileName):
 		shutil.copy(fullFileName, destinationPath)
 
+
+
+#TO-DO:
+# Copy world directory from within the server directory
+# First check the destination path - delete previous files / overwrite them
