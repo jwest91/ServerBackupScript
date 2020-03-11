@@ -51,6 +51,8 @@ while True:
     schedule.run_pending()
     time.sleep(60)
 
+#NOTE: Periodic timing shamelessly copied from a stack overflow example: https://stackoverflow.com/questions/15088037/python-script-to-do-something-at-the-same-time-every-day
+
     #TO-DO:
     # First check the destination path - delete previous files / overwrite them
     # Add timing functionality to continuously backup the files in a certain time interval
